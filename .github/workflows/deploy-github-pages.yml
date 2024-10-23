@@ -25,4 +25,10 @@ jobs:
           install_command: yarn install
           build_command: yarn build-storybook
           path: storybook-static
-          checkout: false 
+          checkout: false
+
+      - name: Upload Storybook artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages-${{ github.run_number }}
+          path: storybook-static
