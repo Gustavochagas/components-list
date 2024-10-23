@@ -13,3 +13,7 @@ dist/
 .idea
 
 .yarn/
+
+coverage
+
+storybook-static
