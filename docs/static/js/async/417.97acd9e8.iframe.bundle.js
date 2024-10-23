@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcomponents_list=self.webpackChunkcomponents_list||[]).push([["417"],{"./node_modules/storybook/core/components/index.js":function(o,n,e){e.d(n,{createCopyToClipboardFunction:function(){return s.xV}});var s=e("./node_modules/@storybook/core/dist/components/index.js")}}]);
