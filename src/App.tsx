@@ -1,5 +1,3 @@
-import "./output.css";
-
 import { Button } from "./Button";
 
 const App = () => {
