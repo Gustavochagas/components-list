@@ -1,5 +1,6 @@
 import { ButtonProps, ButtonVariants } from "./types";
 
+import { ButtonHTMLAttributes } from "react";
 import { ButtonVariant } from "./constants";
 
 const CSS_BY_VARIANT: Record<ButtonVariants, string> = {
@@ -9,14 +10,17 @@ const CSS_BY_VARIANT: Record<ButtonVariants, string> = {
     "bg-white-100 hover:bg-white-200 focus:ring focus:ring-white-200 text-black",
 };
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = ButtonVariant.primary,
-}) => {
+export const Button: React.FC<
+  ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
+> = ({ children, variant = ButtonVariant.primary, ...props }) => {
   const additionalCss = CSS_BY_VARIANT[variant];
 
   return (
-    <button role="button" className={`flex rounded-md px-4 py-3 text-m ${additionalCss}`}>
+    <button
+      {...props}
+      role="button"
+      className={`flex rounded-md px-4 py-3 text-m ${additionalCss}`}
+    >
       {children}
     </button>
   );

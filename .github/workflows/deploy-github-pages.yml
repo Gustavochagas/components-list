@@ -32,12 +32,6 @@ jobs:
         run: yarn build-storybook
 
       # Move Storybook files to /docs
-      - name: Move Project to preview
-        run: |
-          rm -rf preview
-          mv dist preview
-
-      # Move Storybook files to /docs
       - name: Move Storybook to docs
         run: |
           rm -rf docs
@@ -48,4 +42,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: dist
+          keep_files: true
