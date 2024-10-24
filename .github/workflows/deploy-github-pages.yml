@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      # Build the project
+      - name: Build Project
+        run: yarn build
+
       # Build Storybook
       - name: Build Storybook
         run: yarn build-storybook
@@ -32,10 +36,6 @@ jobs:
         run: |
           rm -rf docs
           mv storybook-static docs
-
-      # Build the project
-      - name: Build Project
-        run: yarn build
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
