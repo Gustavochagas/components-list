@@ -4,6 +4,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 export default defineConfig({
   plugins: [pluginReact()],
   output: {
-    assetPrefix: process.env.NODE_ENV === 'production' ? 'https://gustavochagas.github.io/' : '/',
+    assetPrefix: process.env.NODE_ENV === 'production' ? 'https://gustavochagas.github.io/components-list/' : '/',
   }
 });
