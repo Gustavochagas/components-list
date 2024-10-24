@@ -17,8 +17,9 @@ const config = {
   async viteFinal(config) {
     return defineConfig({
       ...config,
-      base: process.env.NODE_ENV === 'production' ? 'https://gustavochagas.github.io/components-list/docs' : '/',
+      base: process.env.NODE_ENV === 'production' ? '/components-list/docs/' : '/',
     });
   },
 };
+
 export default config;
