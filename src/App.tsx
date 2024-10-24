@@ -10,7 +10,12 @@ const App = () => {
         voluptatem corrupti est corporis omnis. Unde aliquid id maiores quis
         nobis.
       </p>
-      <Button onClick={() => (window.location.pathname = "/docs")}>
+      <Button
+        onClick={() =>
+          (window.location.href =
+            "https://gustavochagas.github.io/components-list/docs")
+        }
+      >
         Storybook
       </Button>
     </div>
